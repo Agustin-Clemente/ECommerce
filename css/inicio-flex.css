@@ -1,0 +1,182 @@
+main {
+    height: auto;
+    text-align: center;
+    background-color: white;
+    padding: 25px;
+}
+
+main .cards-container, footer .footer-container  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.section-cards-header{
+  margin-bottom: 10px;
+}
+
+section img {
+    width: 150px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.cards-container section {
+    width: 350px;
+    padding: 15px;
+    color: #505765;
+    margin: 16px;
+    border-radius: 15px;
+}
+
+.cards-container section:hover {
+  border: 1px solid #2F4F4F;
+  
+-webkit-box-shadow:0px 0px 26px 14px rgba(47,79,79,1);
+-moz-box-shadow: 0px 0px 26px 14px rgba(47,79,79,1);
+box-shadow: 0px 0px 26px 14px rgba(47,79,79,1);
+}
+
+
+.cards-container section h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #505765
+}
+
+.cards-container .section-cards-header h1 {
+    color:#505765;
+    margin-bottom: 40px;
+}
+
+.cards-container section p {
+    margin-bottom: 10px;
+}
+
+
+/*MODAL*/
+
+:root {
+    --lightgray: #efefef;
+    --blue: steelblue;
+    --white: #fff;
+    --black: rgba(0, 0, 0, 0.8);
+    --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+  }
+  
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--black);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+  }
+
+  @media(max-width:768px){
+    .modal-content{
+      height: 80vh;
+    }
+    .modal-dialog{
+      overflow:initial;
+    }
+    .cards-container section{
+      width: auto;
+    }
+    section img{
+    width: 34%;
+    }
+  }
+  
+  .modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .modal-dialog {
+    position: relative;
+    border-radius: 5px;
+    background: var(--white);
+    overflow: auto;
+    cursor: default;
+  }
+  
+  .modal-dialog > * {
+    padding: 0 1rem;
+  }
+  
+  .modal-header,
+  .modal-footer {
+    background: white;
+    width: 90%;
+  }
+  
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .modal-header .close-modal {
+    font-size: 1.5rem;
+  }
+  
+  .modal p + p {
+    margin-top: 1rem;
+  }
+
+  
+  
+  .open-modal, #comprar, .close-modal {
+    font-weight: bold;
+    background: var(blue);
+    color: var(white);
+    padding: 0.75rem 1.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+
+
+  #comprar:hover, .close-modal:hover,.open-modal:hover  {
+-webkit-box-shadow:0px 0px 26px 14px rgba(47,79,79,1);
+-moz-box-shadow: 0px 0px 26px 14px rgba(47,79,79,1);
+box-shadow: 0px 0px 26px 14px rgba(47,79,79,1);
+  }
+
+  #comprar:hover{
+    background-color: white;
+    color: #2F4F4F;
+  }
+    
+  .btn-group, #comprar{
+    display: inline;
+  }
+
+  #comprar{
+    color:white;
+    background-color: #2F4F4F;
+    cursor: pointer;
+  }
+
+  .open-modal, .close-modal{
+    color:#2F4F4F;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  section .modal-content:hover{
+    box-shadow: none;
+    border: none;
+  }
+
+  

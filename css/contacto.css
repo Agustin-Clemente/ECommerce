@@ -1,0 +1,135 @@
+main {
+    padding: 20px;
+    height: auto;
+}
+
+main h1 {
+    text-align: center;
+}
+
+.contacto-form {
+    width: 60%;
+    margin: 20px auto;
+    padding: 30px;
+    color: white;   
+    border-radius: 20px;
+    border: 1px solid #2F4F4F;
+}
+
+.input-group {
+    text-align: center;
+    padding: 3px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    background: #2f4f4f50;
+    border: solid 2px #2F4F4F;
+}
+
+main label {
+    color: #2F4F4F; 
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 16px;
+}
+
+textarea{
+    width: 70%;
+    border-radius: 20px;
+}
+
+form input[type="text"]:required:valid,form input[type="email"]:required:valid, form textarea:required:valid{
+    border:2px solid green;
+   }
+
+
+form input[type="text"]:focus:required:invalid, form input[type="email"]:focus:required:invalid, form textarea:focus:required:invalid{
+    border:2px solid red;
+   }
+
+button {
+    display: block;
+    margin: 15px auto;
+    height: 40px;
+    width: 40%;
+    background-color: #2F4F4F;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    color: #2F4F4F;
+    cursor: pointer;
+}
+
+main input {
+    width: 70%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+footer .footer-container  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+footer {
+    background-color: #2F4F4F;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+
+h4{
+    margin: 10px;
+}
+
+h6{
+    margin: 20px 0 0 0;
+}
+
+i{
+    margin: 0 5px;
+}
+
+footer section{
+    margin: 16px;
+}
+
+footer section p{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+footer section a{
+    text-decoration: none;
+    color: white;
+}
+
+footer section i{
+    cursor: pointer;
+}
+
+footer .footer-container section button{
+    margin: 1px solid white;
+    color:white;
+    background-color: transparent;
+    font-weight: bold;
+  padding: 0.75rem 1.75rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  height: auto;
+  width: auto;
+}
+
+footer section button:hover{
+    color:#2F4F4F;
+    background-color: white;
+    cursor: pointer;
+}
+
