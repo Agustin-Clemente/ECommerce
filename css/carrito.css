@@ -1,4 +1,4 @@
-main {
+/* main {
     text-align: center;
     background-color: white;
     padding: 25px;
@@ -9,6 +9,21 @@ main section{
 }
 
 main section img{
+    height: 50vh;
+    
+} */
+
+.carrito {
+    text-align: center;
+    background-color: white;
+    padding: 25px;
+}
+
+.carrito section{
+    margin: 50px auto;
+}
+
+.carrito section img{
     height: 50vh;
     
 }
@@ -80,3 +95,20 @@ footer section button:hover{
     cursor: pointer;
 }
 
+.carrito table {
+    border-collapse: collapse;
+    margin: 5px auto;
+}
+
+th,td {
+    border: 1px solid black;
+    width: 80px;
+    height: 30px;
+    padding: 10px;
+}
+
+th {
+    text-transform: uppercase;
+    color: white;
+    background-color: #111;
+}

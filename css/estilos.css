@@ -113,6 +113,9 @@ footer {
     color: white;
     text-align: center;
     font-size: 22px;
+    /* position: fixed;
+    bottom: 0;
+    width: 100%; */
 }
 
 h4{

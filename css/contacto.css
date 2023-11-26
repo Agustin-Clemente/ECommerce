@@ -1,9 +1,18 @@
-main {
+/* main {
     padding: 20px;
     height: auto;
 }
 
 main h1 {
+    text-align: center;
+} */
+
+.contacto {
+    padding: 20px;
+    height: auto;
+}
+
+.contacto h1 {
     text-align: center;
 }
 
@@ -16,18 +25,18 @@ main h1 {
     border: 1px solid #2F4F4F;
 }
 
-.input-group {
+.contacto .input-group {
     text-align: center;
     padding: 3px;
 }
 
-input:focus, textarea:focus {
+.contacto input:focus, textarea:focus {
     outline: none;
     background: #2f4f4f50;
     border: solid 2px #2F4F4F;
 }
 
-main label {
+.contacto label {
     color: #2F4F4F; 
     text-transform: capitalize;
     display: block;
@@ -35,21 +44,21 @@ main label {
     margin-top: 16px;
 }
 
-textarea{
+.contacto textarea{
     width: 70%;
     border-radius: 20px;
 }
 
-form input[type="text"]:required:valid,form input[type="email"]:required:valid, form textarea:required:valid{
+.contacto form input[type="text"]:required:valid,form input[type="email"]:required:valid, form textarea:required:valid{
     border:2px solid green;
    }
 
 
-form input[type="text"]:focus:required:invalid, form input[type="email"]:focus:required:invalid, form textarea:focus:required:invalid{
+   .contacto form input[type="text"]:focus:required:invalid, .contacto form input[type="email"]:focus:required:invalid, .contacto form textarea:focus:required:invalid{
     border:2px solid red;
    }
 
-button {
+   .contacto button {
     display: block;
     margin: 15px auto;
     height: 40px;
@@ -60,13 +69,13 @@ button {
     color: white;
 }
 
-button:hover {
+.contacto button:hover {
     background-color: white;
     color: #2F4F4F;
     cursor: pointer;
 }
 
-main input {
+.contacto input {
     width: 70%;
     height: 30px;
     border-radius: 5px;

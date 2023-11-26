@@ -2,13 +2,23 @@
 /*                     Variables Globales                     */
 /* ---------------------------------------------------------- */
 
+//import { getProductos, setProductos } from "./productosMem.js"
+import carrito from "./carrito.js"
+import productosMem from "./productosMem.js"
+//import { getProductosAPI } from "./servicioProductos.js"
+import servicioProductos from "./servicioProductos.js"
+
 /* ---------------------------------------------------------- */
 /*                     funciones Globales                     */
 /* ---------------------------------------------------------- */
 
-function representarCardsProductos() {
+//function representarCardsProductos() {
+  function render() {
     
     var cards = ''
+
+    //let productos = getProductos()
+    let productos = productosMem.getAll()
 
     if(productos.length) {
         for(var i=0; i<productos.length; i++) {
@@ -19,10 +29,10 @@ function representarCardsProductos() {
                 <p><b class="precio">Precio:</b> \$${productos[i].precio}</p> 
                 <p><b>Detalles:</b> ${productos[i].descripcionCorta}</p> 
                 <br>
-                <div class="btn-group"> <button type="button" class="open-modal" 
-                data-open="modal${productos[i].nombre}">  Mas info </button>
-                <button id="comprar"> Comprar </button>
-                
+                <div class="btn-group"> 
+                <button type="button" class="open-modal" data-open="modal${productos[i].nombre}">  Mas info </button>
+                <button id="comprar-${productos[i].id}"> Comprar </button>
+                </div>
                 <div class="modal" id="modal${productos[i].nombre}" data-animation="slideInOutLeft">
   <div class="modal-dialog">` +
   /*
@@ -46,12 +56,8 @@ function representarCardsProductos() {
       <img src="${productos[i].foto}" alt="">
     </section>
     <footer class="modal-footer">
-    <button class="close-modal" aria-label="close modal" data-close>
-    Cerrar 
-  </button>
-  <button class="close-modal" id="comprar" aria-label="close modal" data-close>
-    Comprar
-  </button>
+      <button class="close-modal" aria-label="close modal" data-close> Cerrar </button>
+      <button class="close-modal" id="comprar" aria-label="close modal" data-close> Comprar </button>
     </footer>
   </div>
 </div>
@@ -61,6 +67,8 @@ function representarCardsProductos() {
     else cards += '<h2>No se encontraron productos para mostrar</h2>'
 
     document.querySelector('.cards-container').innerHTML = cards
+
+
 
     const openEls = document.querySelectorAll("[data-open]");
 const closeEls = document.querySelectorAll("[data-close]");
@@ -90,12 +98,35 @@ for (const el of closeEls) {
       document.querySelector(".modal.is-visible").classList.remove(isVisible);
     }
   });
+
+  
 }
 
+function setListeners() {
+  const botones = document.querySelectorAll(".inicio section button")
+  botones.forEach(boton => {
+    boton.addEventListener("click", e => {
+      const id = e.target.id.split("-")[1]
+      let producto = productosMem.get(id)
+      console.log(producto)
+      carrito.agregar(producto)
+    })
+  })
+  
+}
 
-function start() {
+async function start() {
     console.warn( document.querySelector('title').innerText )
 
-    representarCardsProductos()
+    //let productos = await getProductosAPI()
+    let productos = await servicioProductos.getAll()
+    //setProductos(productos)
+    productosMem.set(productos)
+
+    render()
+    setListeners()
 }
 
+export default {
+  start
+}

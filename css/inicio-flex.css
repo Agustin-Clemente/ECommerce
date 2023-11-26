@@ -1,4 +1,4 @@
-main {
+/* main {
     height: auto;
     text-align: center;
     background-color: white;
@@ -9,19 +9,32 @@ main .cards-container, footer .footer-container  {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+} */
+
+.inicio {
+  height: auto;
+  text-align: center;
+  background-color: white;
+  padding: 25px;
 }
 
-.section-cards-header{
+.inicio .cards-container, footer .footer-container  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.inicio .section-cards-header{
   margin-bottom: 10px;
 }
 
-section img {
+.inicio section img {
     width: 150px;
     margin-bottom: 20px;
     border-radius: 10px;
 }
 
-.cards-container section {
+.inicio .cards-container section {
     width: 350px;
     padding: 15px;
     color: #505765;
@@ -29,7 +42,7 @@ section img {
     border-radius: 15px;
 }
 
-.cards-container section:hover {
+.inicio .cards-container section:hover {
   border: 1px solid #2F4F4F;
   
 -webkit-box-shadow:0px 0px 26px 14px rgba(47,79,79,1);
@@ -38,18 +51,18 @@ box-shadow: 0px 0px 26px 14px rgba(47,79,79,1);
 }
 
 
-.cards-container section h3 {
+.inicio .cards-container section h3 {
     font-size: 24px;
     margin-bottom: 30px;
     color: #505765
 }
 
-.cards-container .section-cards-header h1 {
+.inicio .cards-container .section-cards-header h1 {
     color:#505765;
     margin-bottom: 40px;
 }
 
-.cards-container section p {
+.inicio .cards-container section p {
     margin-bottom: 10px;
 }
 
@@ -136,7 +149,7 @@ box-shadow: 0px 0px 26px 14px rgba(47,79,79,1);
 
   
   
-  .open-modal, #comprar, .close-modal {
+  .open-modal, .inicio section button, .close-modal {
     font-weight: bold;
     background: var(blue);
     color: var(white);
@@ -147,22 +160,22 @@ box-shadow: 0px 0px 26px 14px rgba(47,79,79,1);
   }
 
 
-  #comprar:hover, .close-modal:hover,.open-modal:hover  {
+  .inicio section button:hover, .close-modal:hover,.open-modal:hover  {
 -webkit-box-shadow:0px 0px 26px 14px rgba(47,79,79,1);
 -moz-box-shadow: 0px 0px 26px 14px rgba(47,79,79,1);
 box-shadow: 0px 0px 26px 14px rgba(47,79,79,1);
   }
 
-  #comprar:hover{
+  .inicio section button:hover{
     background-color: white;
     color: #2F4F4F;
   }
     
-  .btn-group, #comprar{
+  .btn-group, .inicio section button{
     display: inline;
   }
 
-  #comprar{
+  .inicio section button{
     color:white;
     background-color: #2F4F4F;
     cursor: pointer;

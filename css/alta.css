@@ -1,9 +1,18 @@
-main {
+/* main {
     padding: 20px;
     height: auto;
 }
 
 main h1 {
+    text-align: center;
+} */
+
+.alta {
+    padding: 20px;
+    height: auto;
+}
+
+.alta h1 {
     text-align: center;
 }
 
@@ -17,12 +26,12 @@ main h1 {
     border-radius: 20px;
 }
 
-.input-group {
+.alta .input-group {
     text-align: center;
     padding: 3px;
 }
 
-main label {
+.alta label {
     color:white;
     text-transform: capitalize;
     display: block;
@@ -30,13 +39,13 @@ main label {
     margin-top: 16px;
 }
 
-main label[for="envio-sin-cargo"] {
+.alta label[for="envio-sin-cargo"] {
     display: inline-block;
     margin: 10px 0;
 }
 
 
-#agregar {
+.alta #agregar {
     display: block;
     margin: 15px auto;
     height: 40px;
@@ -53,13 +62,13 @@ main label[for="envio-sin-cargo"] {
     cursor: pointer;
 }
 
-main input {
+.alta input {
     width: 70%;
     height: 30px;
     border-radius: 5px;
 }
 
-main input:focus {
+.alta input:focus {
    
     outline: 2px solid #2F4F4F;
     
@@ -69,29 +78,29 @@ box-shadow: 0px 0px 26px 0px rgba(252,252,252,1);
 
 }
 
-textarea{
+.alta textarea{
     width: 70%;
     border-radius: 5px;
 }
 
-textarea:focus{
+.alta textarea:focus{
     outline: 2px solid #2F4F4F;
 -webkit-box-shadow:0px 0px 26px 0px rgba(252,252,252,1);
 -moz-box-shadow: 0px 0px 26px 0px rgba(252,252,252,1);
 box-shadow: 0px 0px 26px 0px rgba(252,252,252,1);
-
+background-color: white;
 }
 
-main input[type="checkbox"] {
+.alta input[type="checkbox"] {
     width: 20px;
     height: 20px;
 }
 
-.invalid {
+.alta .invalid {
     background-color: rgba(239, 147, 143, 0.877);
   }
 
-form input[type="text"]:required:valid, form input[type="number"]:required:valid{
+  .alta form input[type="text"]:required:valid, .alta form input[type="number"]:required:valid{
     border:2px solid green;
    }
 
@@ -100,7 +109,7 @@ form input[type="text"]:focus:required:invalid, form input[type="number"]:focus:
     border:2px solid red;
    }
 
-/*
+
 table {
     border-collapse: collapse;
     margin: 5px auto;
@@ -118,8 +127,8 @@ th {
     color: white;
     background-color: #111;
 }
-*/
-main h2 {
+
+.alta h2 {
     text-align: center;
 }
 

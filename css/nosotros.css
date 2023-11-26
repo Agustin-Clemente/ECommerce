@@ -1,4 +1,4 @@
-main {
+/* main {
     padding: 20px;
     height: auto;
     text-align: center;
@@ -9,6 +9,22 @@ main h1 {
 }
 
 main img {
+    width: 60vw;
+    margin-bottom: 20px;
+    border-radius: 10px;
+} */
+
+.nosotros {
+    padding: 20px;
+    height: auto;
+    text-align: center;
+}
+
+.nosotros h1 {
+    text-align: center;
+}
+
+.nosotros img {
     width: 60vw;
     margin-bottom: 20px;
     border-radius: 10px;
